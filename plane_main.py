@@ -88,7 +88,6 @@ class PlaneGame(object):
 
         # 判断列表时候有内容
         if len(enemies) > 0:
-
             # 让英雄牺牲
             self.hero.kill()
 
@@ -116,8 +115,8 @@ class PlaneGame(object):
         pygame.quit()
         exit()
 
-if __name__ == '__main__':
 
+if __name__ == '__main__':
     # 创建游戏对象
     game = PlaneGame()
 

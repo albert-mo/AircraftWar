@@ -1,7 +1,6 @@
 import pygame
 from plane_sprites import *
 
-
 # 游戏的初始化
 pygame.init()
 
@@ -26,13 +25,11 @@ clock = pygame.time.Clock()
 # 1. 定义rect记录飞机的初始位置
 hero_rect = pygame.Rect(150, 300, 102, 126)
 
-
 # 创建敌机的精灵
 enemy = GameSprite("./images/enemy1.png")
 enemy1 = GameSprite("./images/enemy1.png", 2)
 # 创建敌机的精灵组
 enemy_group = pygame.sprite.Group(enemy, enemy1)
-
 
 # 游戏循环 -> 意味着游戏的正式开始！
 while True:
@@ -70,7 +67,6 @@ while True:
 
     # draw - 在screen上绘制所有的精灵
     enemy_group.draw(screen)
-
 
     # 4. 调用update方法更新显示
     pygame.display.update()

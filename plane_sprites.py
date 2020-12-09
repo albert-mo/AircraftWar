@@ -15,7 +15,6 @@ class GameSprite(pygame.sprite.Sprite):
     """飞机大战游戏精灵"""
 
     def __init__(self, image_name, speed=1):
-
         # 调用父类的初始化方法
         super().__init__()
 
@@ -25,7 +24,6 @@ class GameSprite(pygame.sprite.Sprite):
         self.speed = speed
 
     def update(self):
-
         # 在屏幕的垂直方向上移动
         self.rect.y += self.speed
 
@@ -56,7 +54,6 @@ class Enemy(GameSprite):
     """敌机精灵"""
 
     def __init__(self):
-
         # 1. 调用父类方法，创建敌机精灵，同时指定敌机图片
         super().__init__("./images/enemy1.png")
 
@@ -70,7 +67,6 @@ class Enemy(GameSprite):
         self.rect.x = random.randint(0, max_x)
 
     def update(self):
-
         # 1. 调用父类方法，保持垂直方向的飞行
         super().update()
 
@@ -130,12 +126,10 @@ class Bullet(GameSprite):
     """子弹精灵"""
 
     def __init__(self):
-
         # 调用父类方法，设置子弹图片，设置初始速度
         super().__init__("./images/bullet1.png", -2)
 
     def update(self):
-
         # 调用父类方法，让子弹沿垂直方向飞行
         super().update()
 
