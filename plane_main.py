@@ -55,6 +55,7 @@ class PlaneGame(object):
 
             # 判断是否退出游戏
             if event.type == pygame.QUIT:
+                # 类名.可以调用静态方法
                 PlaneGame.__game_over()
             elif event.type == CREATE_ENEMY_EVENT:
                 # print("敌机出场...")
@@ -108,6 +109,7 @@ class PlaneGame(object):
         self.hero.bullets.update()
         self.hero.bullets.draw(self.screen)
 
+    # 静态方法需要新增标识符
     @staticmethod
     def __game_over():
         print("游戏结束")

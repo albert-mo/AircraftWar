@@ -61,8 +61,9 @@ class Enemy(GameSprite):
         self.speed = random.randint(1, 3)
 
         # 3. 指定敌机的初始随机位置
+        # 指定y值
         self.rect.bottom = 0
-
+        # 指定x值
         max_x = SCREEN_RECT.width - self.rect.width
         self.rect.x = random.randint(0, max_x)
 
