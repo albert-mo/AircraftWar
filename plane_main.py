@@ -84,7 +84,7 @@ class PlaneGame(object):
         # 1. 子弹摧毁敌机
         pygame.sprite.groupcollide(self.hero.bullets, self.enemy_group, True, True)
 
-        # 2. 敌机撞毁英雄
+        # 2. 敌机撞毁英雄,参数为True则精灵组中精灵也消失
         enemies = pygame.sprite.spritecollide(self.hero, self.enemy_group, True)
 
         # 判断列表时候有内容
